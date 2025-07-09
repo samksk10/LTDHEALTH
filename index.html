@@ -4,125 +4,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mutuelle Santé Lobiko na Biso</title>
+    <title>Mutuelle Santé LTD HEALTH CLUB</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="d-flex flex-column min-vh-100">
-    <header>
-        <div class="container py-2">
-            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
-                <!-- Logo et titre -->
-                <div class="d-flex align-items-center mb-2 mb-md-0">
-                    <img src="images/logo.jpg" alt="Logo" class="logo me-3">
-                    <div class="header-text">
-                        <h1 class="h4 mb-0 text-white">LTD <br>HEALTH CLUB</h1>
-                        <p class="text-white-50 mb-0"><small>Votre santé, Notre priorité</small></p>
-                    </div>
-                </div>
-                <!-- Navigation compacte -->
-                <nav aria-label="Navigation principale" class="mt-2 mt-md-0">
-                    <ul class="list-unstyled d-flex flex-wrap gap-3 mb-0">
-                        <li><a href="about.html" class="text-white text-decoration-none">
-                                <i class="fas fa-info-circle fa-sm me-1"></i>À propos</a></li>
-                        <li><a href="services.html" class="text-white text-decoration-none">
-                                <i class="fas fa-hands-helping fa-sm me-1"></i>Services</a></li>
-                        <li><a href="contact.html" class="text-white text-decoration-none">
-                                <i class="fas fa-envelope fa-sm me-1"></i>Contact</a></li>
+
+    <!-- HEADER -->
+    <header class="shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0D6EFD;">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="images/logo.jpg" alt="Logo" class="logo me-2">
+                    <span class="fw-bold">LTD HEALTH CLUB</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a href="about.html" class="nav-link"><i
+                                    class="fas fa-info-circle me-1"></i><span class="fw-bold">À propos</span></a></li>
+                        <li class="nav-item"><a href="services.html" class="nav-link"><i
+                                    class="fas fa-hands-helping me-1"></i><span class="fw-bold">Nos Services</span></a>
+                        </li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link"><i
+                                    class="fas fa-envelope me-1"></i><span class="fw-bold">Contact</span></a>
+                        </li>
                     </ul>
-                </nav>
+                </div>
             </div>
-        </div>
+        </nav>
     </header>
 
-    <!-- Contenu principal -->
-    <main class="flex-grow-1 py-4">
-        <section id="hero" class="bg-light">
-            <div class="container py-4">
-                <div class="row g-4">
-                    <div class="col-lg-8 mx-auto fade-in-up">
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <p class="lead">Bienvenue sur le site de la Mutuelle de Santé Lobiko na Biso, une
-                                    mutuelle de proximité à taille humaine.</p>
-                                <p>Nous proposons des solutions adaptées pour couvrir vos besoins en santé, que vous
-                                    soyez particulier, travailleur indépendant ou retraité.</p>
-                            </div>
-                        </div>
+    <!-- HERO -->
+    <section class="hero-section bg-light py-5 text-center position-relative">
+        <div class="hero-bg"></div>
+        <div class="container position-relative z-1 hero-text-white">
+            <h1 class="display-5 fw-bold mb-3 fade-in-up">Votre santé, notre priorité</h1>
+            <p class="lead mb-4 fade-in-up">Une mutuelle de proximité, humaine et accessible à tous. Des
+                garanties
+                adaptées, un accompagnement personnalisé et des remboursements rapides.</p>
+            <p class="lead mb-4 fade-in-up">LTD HEALTH CLUB interroge pour vous les partenaires qui correspondent à vos
+                besoins de couverture Santé
+                Choisir une mutuelle santé, c'est trouver l'équilibre entre vos cotisations mensuelles, vos
+                remboursements de soins de
+                santé et le reste à charge. Le comparateur de LTD HEALTH CLUB sélectionne pour vous les centres et
+                cliniques adaptés à votre profil.</p>
+            <a href="contact.html" class="btn btn-primary btn-lg px-4 fade-in-up"><i
+                    class="fas fa-user-plus me-2"></i>Demander un devis
+            </a>
+        </div>
+    </section>
 
-                        <!-- Garanties -->
-                        <div class="card mb-4 fade-in-up">
-                            <div class="card-body">
-                                <h2 class="h4 mb-3">Nos garanties santé</h2>
-                                <ul class="list-unstyled row row-cols-1 row-cols-md-2 g-3">
-                                    <li class="col"><i class="fas fa-hospital me-2 text-primary"></i>Hospitalisation
-                                    </li>
-                                    <li class="col"><i class="fas fa-stethoscope me-2 text-primary"></i>Soins courants
-                                    </li>
-                                    <li class="col"><i class="fas fa-tooth me-2 text-primary"></i>Dentaire & optique
-                                    </li>
-                                    <li class="col"><i class="fas fa-heartbeat me-2 text-primary"></i>Prévention</li>
-                                    <li class="col"><i
-                                            class="fas fa-hand-holding-heart me-2 text-primary"></i>Accompagnement</li>
-                                    <li class="col"><i class="fas fa-baby me-2 text-primary"></i>Pédiatrie</li>
-                                </ul>
-                            </div>
+    <!-- GARANTIES / SERVICES -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="h3 text-center mb-4 fade-in-up">Nos garanties santé</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4 fade-in-up">
+                    <div class="card h-100 text-center border-0 shadow-sm">
+                        <div class="card-body">
+                            <i class="fas fa-hospital fa-2x text-primary mb-3"></i>
+                            <h5 class="card-title">Hospitalisation</h5>
+                            <p class="card-text">Prise en charge optimale de vos frais d’hospitalisation.</p>
                         </div>
                     </div>
+                </div>
+                <div class="col-md-4 fade-in-up">
+                    <div class="card h-100 text-center border-0 shadow-sm">
+                        <div class="card-body">
+                            <i class="fas fa-stethoscope fa-2x text-primary mb-3"></i>
+                            <h5 class="card-title">Soins courants</h5>
+                            <p class="card-text">Consultations, analyses, pharmacie, radiologie…</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-in-up">
+                    <div class="card h-100 text-center border-0 shadow-sm">
+                        <div class="card-body">
+                            <i class="fas fa-tooth fa-2x text-primary mb-3"></i>
+                            <h5 class="card-title">Dentaire & Optique</h5>
+                            <p class="card-text">Des remboursements adaptés pour vos soins dentaires et optiques.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Ajoute d'autres garanties si besoin -->
+            </div>
+        </div>
+    </section>
 
-                    <!-- Contact rapide EN BAS -->
-                    <div class="col-lg-8 mx-auto fade-in-up">
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <h2 class="h4 mb-3">Contact rapide</h2>
-                                <ul class="list-unstyled vstack gap-3">
-                                    <li>
-                                        <i class="fas fa-phone me-2"></i>
-                                        <strong>Téléphone :</strong><br>
-                                        <a href="tel:+243819975194">+243 819 975 194</a>
+    <!-- CONTACT RAPIDE -->
+    <section class="contact-rapide-section bg-primary text-white py-5 position-relative">
+        <div class="contact-rapide-bg"></div>
+        <div class="container position-relative z-1">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 mx-auto fade-in-up">
+                    <div class="card border-0 shadow-lg bg-white bg-opacity-75 rounded-5">
+                        <div class="row g-0 align-items-center">
+                            <div class="col-md-6 p-4 border-end">
+                                <h2 class="h4 mb-4 text-primary text-center">Nous Contacter Rapidement</h2>
+                                <ul class="list-unstyled vstack gap-4">
+                                    <li class="d-flex align-items-center">
+                                        <span
+                                            class="contact-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3"><i
+                                                class="fas fa-phone fa-lg"></i></span>
+                                        <div>
+                                            <strong>Téléphone :</strong><br>
+                                            <a href="tel:+243819975194" class="text-decoration-none text-dark">+243 819
+                                                975 194</a>
+                                        </div>
                                     </li>
-                                    <li>
-                                        <i class="fas fa-envelope me-2"></i>
-                                        <strong>Email :</strong><br>
-                                        <a href="mailto:ltdHealthClub10@gmail.com">ltdHealthClub10@gmail.com</a>
+                                    <li class="d-flex align-items-center">
+                                        <span
+                                            class="contact-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3"><i
+                                                class="fas fa-envelope fa-lg"></i></span>
+                                        <div>
+                                            <strong>Email :</strong><br>
+                                            <a href="mailto:LtdHealthClub10@gmail.com"
+                                                class="text-decoration-none text-dark">LtdHealthClub10@gmail.com</a>
+                                        </div>
                                     </li>
-                                    <li>
-                                        <i class="fas fa-map-marker-alt me-2"></i>
-                                        <strong>Adresse :</strong><br>
-                                        Quartier : Ngomba-Kinkusa,<br>avenue équateur n°15
+                                    <li class="d-flex align-items-center">
+                                        <span
+                                            class="contact-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3"><i
+                                                class="fas fa-map-marker-alt fa-lg"></i></span>
+                                        <div>
+                                            <strong>Adresse :</strong><br>
+                                            Avenue lotis n°15
+                                        </div>
                                     </li>
                                 </ul>
-                                <hr>
-                                <p class="text-muted mb-0"><small>Ouvert du lundi au vendredi, de 9h à 17h</small></p>
+                                <p class="text-muted mt-4 mb-0 text-center"><small>Ouvert du lundi au vendredi, de 9h à
+                                        17h</small></p>
+                            </div>
+                            <div class="col-md-6 p-4">
+                                <form>
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control rounded-3" placeholder="Votre nom"
+                                            required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="email" class="form-control rounded-3" placeholder="Votre email"
+                                            required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <textarea class="form-control rounded-3" rows="3" placeholder="Votre message"
+                                            required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100 rounded-3">Envoyer <i
+                                            class="fas fa-paper-plane ms-2"></i></button>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <!-- Pied de page -->
+    <!-- FOOTER -->
     <footer class="bg-dark text-white mt-auto py-4">
         <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <p class="mb-1">&copy; 2025 Mutuelle de santé Lobíko na Biso. Tous droits réservés.</p>
+            <div class="row align-items-center">
+                <div class="col-md-8" texte-center>
+                    <p class="mb-1">&copy; 2025 Samuel Kisenge. Tous droits réservés.</p>
                     <p class="text-white-50 mb-0"><small>
-                            Quartier Ngomba-Kinkusa, avenue équateur numéro 15 -
-                            Téléphone : <a href="tel:+243819975194" class="text-white-50">+243 819 975 194</a> -
-                            Email : <a href="mailto:lobikonabiso@gmail.com"
-                                class="text-white-50">lobikonabiso@gmail.com</a>
+                            Téléphone : <a href="tel:+243811641927" class="text-white-50 text-decoration-none">+243 811
+                                641 927</a> -
+                            Email : <a href="mailto:ksksamuelkis@gmail.com"
+                                class="text-white-50 text-decoration-none">ksksamuelkis@gmail.com</a>
                         </small></p>
                 </div>
                 <div class="col-md-4 text-md-end mt-3 mt-md-0">
-                    <a href="https://facebook.com/lobikonabiso" class="text-white me-3" target="_blank"
+                    <a href="https://facebook.com/LtdHealthClub10" class="text-white me-3" target="_blank"
                         rel="noopener"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://twitter.com/lobikonabiso" class="text-white me-3" target="_blank" rel="noopener"><i
-                            class="fab fa-twitter"></i></a>
-                    <a href="#" class="text-white" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://twitter.com/LtdHealthClub10" class="text-white me-3" target="_blank"
+                        rel="noopener"><i class="fab fa-twitter"></i></a>
+                    <a href="https://linkedin.com/" class="text-white" target="_blank" rel="noopener"><i
+                            class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
         </div>
