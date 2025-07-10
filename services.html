@@ -9,46 +9,73 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 
+    <style>
+        /* Ajoute ce style dans ton fichier CSS global ou dans un <style> */
+        .services-hero-section {
+            min-height: 260px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .services-hero-bg {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(rgba(13, 110, 253, 0.55), rgba(13, 110, 253, 0.55)), url('images/garantie.jpg') center/cover no-repeat;
+            z-index: 0;
+            border-radius: 0 0 2rem 2rem;
+        }
+
+        .services-hero-section .container {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
 </head>
 
 <body class="d-flex flex-column min-vh-100">
     <!-- En-tête -->
-    <header>
-        <div class="container py-2">
-            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
-                <!-- Logo et titre -->
-                <div class="d-flex align-items-center mb-2 mb-md-0">
-                    <img src="images/logo.jpg" alt="Logo" class="logo me-3">
-                    <div class="header-text">
-                        <h1 class="h4 mb-0 text-white">LTD <br>HEALTH CLUB</h1>
-                        <p class="text-white-50 mb-0"><small>Votre santé, Notre priorité</small></p>
-                    </div>
-                </div>
-                <!-- Navigation compacte -->
-                <nav aria-label="Navigation principale" class="mt-2 mt-md-0">
-                    <ul class="list-unstyled d-flex flex-wrap gap-3 mb-0">
-                        <li><a href="index.html" class="text-white text-decoration-none">
-                                <i class="fas fa-home fa-sm me-1"></i>Accueil</a></li>
-                        <li><a href="about.html" class="text-white text-decoration-none">
-                                <i class="fas fa-info-circle fa-sm me-1"></i>À propos</a></li>
-                        <li><a href="contact.html" class="text-white text-decoration-none">
-                                <i class="fas fa-envelope fa-sm me-1"></i>Contact</a></li>
+    <!-- HEADER -->
+    <header class="shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0D6EFD;">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="images/logo.jpg" alt="Logo" class="logo me-2">
+                    <span class="fw-bold">LTD HEALTH CLUB</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a href="index.html" class="nav-link"><i
+                                    class="fas fa-home fa-sm me-1"></i>Accueil</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link"><i
+                                    class="fas fa-info-circle me-1"></i><span class="fw-bold">À propos</span></a></li>
+
+                        <li class="nav-item"><a href="contact.html" class="nav-link"><i
+                                    class="fas fa-envelope me-1"></i><span class="fw-bold">Contact</span></a>
+                        </li>
                     </ul>
-                </nav>
+                </div>
             </div>
-        </div>
+        </nav>
     </header>
+
+    <!-- Bannière dynamique -->
+    <section class="services-hero-section position-relative mb-5">
+        <div class="services-hero-bg"></div>
+        <div class="container position-relative z-1 py-5 text-center">
+            <h1 class="display-4 fw-bold text-white mb-3">Nos garanties santé</h1>
+            <p class="lead text-white mb-0">Des solutions adaptées à tous les besoins et budgets</p>
+        </div>
+    </section>
 
     <!-- Contenu principal -->
     <main class="flex-grow-1 py-5">
         <section class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-10">
-                    <div class="text-center mb-5">
-                        <h2 class="display-5 mb-3 text-primary">Nos garanties santé</h2>
-                        <p class="lead">Des solutions adaptées à tous les besoins et budgets</p>
-                    </div>
-
                     <!-- Cartes de services -->
                     <div class="row g-4">
                         <!-- Hospitalisation -->
@@ -58,6 +85,9 @@
                                     <div class="icon-wrapper mb-3">
                                         <i class="fas fa-hospital text-primary fa-3x"></i>
                                     </div>
+                                    <img src="images/hospitalisation.jpg" alt="Hospitalisation"
+                                        class="img-fluid rounded-4 shadow mb-3"
+                                        style="max-height:120px; object-fit:cover;">
                                     <h3 class="h5 mb-3">Hospitalisation</h3>
                                     <p>Prise en charge complète de vos frais d'hospitalisation avec des forfaits adaptés
                                         à vos besoins.</p>
@@ -75,6 +105,9 @@
                                     <div class="icon-wrapper mb-3">
                                         <i class="fas fa-stethoscope text-primary fa-3x"></i>
                                     </div>
+                                    <img src="images/people.jpg" alt="Soins courants"
+                                        class="img-fluid rounded-4 shadow mb-3"
+                                        style="max-height:120px; object-fit:cover;">
                                     <h3 class="h5 mb-3">Soins courants</h3>
                                     <p>Remboursement des consultations médicales, analyses et petits soins du quotidien.
                                     </p>
@@ -92,6 +125,9 @@
                                     <div class="icon-wrapper mb-3">
                                         <i class="fas fa-tooth text-primary fa-3x"></i>
                                     </div>
+                                    <img src="images/dentaire.jpg" alt="Dentaire & Optique"
+                                        class="img-fluid rounded-4 shadow mb-3"
+                                        style="max-height:120px; object-fit:cover;">
                                     <h3 class="h5 mb-3">Dentaire & Optique</h3>
                                     <p>Forfaits préventifs et curatifs pour vos soins dentaires et votre équipement
                                         optique.</p>
@@ -109,6 +145,9 @@
                                     <div class="icon-wrapper mb-3">
                                         <i class="fas fa-heartbeat text-primary fa-3x"></i>
                                     </div>
+                                    <img src="images/prevention.jpg" alt="Prévention"
+                                        class="img-fluid rounded-4 shadow mb-3"
+                                        style="max-height:120px; object-fit:cover;">
                                     <h3 class="h5 mb-3">Prévention</h3>
                                     <p>Programmes de prévention et bilans de santé réguliers pour maintenir votre
                                         capital santé.</p>
@@ -126,6 +165,9 @@
                                     <div class="icon-wrapper mb-3">
                                         <i class="fas fa-hands-helping text-primary fa-3x"></i>
                                     </div>
+                                    <img src="images/assistance.jpg" alt="Assistance"
+                                        class="img-fluid rounded-4 shadow mb-3"
+                                        style="max-height:120px; object-fit:cover;">
                                     <h3 class="h5 mb-3">Assistance</h3>
                                     <p>Service d'accompagnement personnalisé pour toutes vos démarches de santé.</p>
                                     <a href="#assistance-details" class="btn btn-outline-primary btn-sm mt-auto">
@@ -142,6 +184,9 @@
                                     <div class="icon-wrapper mb-3">
                                         <i class="fas fa-sliders-h text-primary fa-3x"></i>
                                     </div>
+                                    <img src="images/formule.jpg" alt="Formules adaptées"
+                                        class="img-fluid rounded-4 shadow mb-3"
+                                        style="max-height:120px; object-fit:cover;">
                                     <h3 class="h5 mb-3">Formules adaptées</h3>
                                     <p>Des solutions sur mesure pour particuliers, indépendants et retraités.</p>
                                     <a href="#formules-details" class="btn btn-primary btn-sm mt-auto">
@@ -163,7 +208,9 @@
                                         toute question.</p>
                                 </div>
                                 <div class="col-md-4 text-md-end mt-3 mt-md-0">
-                                    <a href="contact.html" class="btn btn-primary px-4 py-2">
+                                    <img src="images/conseil.jpg" alt="Conseil" class="img-fluid rounded-4 shadow mb-2"
+                                        style="max-height:120px; object-fit:cover;">
+                                    <a href="contact.html" class="btn btn-primary px-4 py-2 mt-2 d-block">
                                         <i class="fas fa-phone-alt me-2"></i>Nous contacter
                                     </a>
                                 </div>
@@ -178,20 +225,23 @@
     <!-- Pied de page -->
     <footer class="bg-dark text-white mt-auto py-4">
         <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <p class="mb-1">&copy; 2025 Mutuelle de santé Lobíko na Biso. Tous droits réservés.</p>
+            <div class="row align-items-center">
+                <div class="col-md-8" texte-center>
+                    <p class="mb-1">&copy; 2025 Samuel Kisenge. Tous droits réservés.</p>
                     <p class="text-white-50 mb-0"><small>
-                            Quartier Ngomba-Kinkusa, avenue équateur numéro 15 -
-                            Téléphone : +243 819 975 194 -
-                            Email : <a href="mailto:lobikonabiso@gmail.com"
-                                class="text-white-50">lobikonabiso@gmail.com</a>
+                            Téléphone : <a href="tel:+243811641927" class="text-white-50 text-decoration-none">+243 811
+                                641 927</a> -
+                            Email : <a href="mailto:ksksamuelkis@gmail.com"
+                                class="text-white-50 text-decoration-none">ksksamuelkis@gmail.com</a>
                         </small></p>
                 </div>
                 <div class="col-md-4 text-md-end mt-3 mt-md-0">
-                    <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://facebook.com/LtdHealthClub10" class="text-white me-3" target="_blank"
+                        rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/LtdHealthClub10" class="text-white me-3" target="_blank"
+                        rel="noopener"><i class="fab fa-twitter"></i></a>
+                    <a href="https://linkedin.com/" class="text-white" target="_blank" rel="noopener"><i
+                            class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
         </div>
