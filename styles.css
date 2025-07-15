@@ -278,6 +278,10 @@ footer .fab:hover {
     }
 }
 
+#formSuccess {
+    display: none;
+}
+
 @media (max-width: 991px) {
     .contact-rapide-section .card.bg-opacity-75 {
         border-radius: 1rem;
