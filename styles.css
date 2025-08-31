@@ -1,13 +1,14 @@
+/* Couleurs principales orange, blanc, noir */
 :root {
-    --bs-primary: #005f73;
-    --bs-secondary: #094d56;
-    --bs-light: #f8f9fa;
-    --bs-dark: #212529;
+    --main-orange: #ff6600;
+    --main-black: #222;
+    --main-white: #fff;
 }
 
+/* Fond et texte général */
 body {
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    background-color: var(--bs-light);
+    background-color: var(--main-white);
+    color: var(--main-black);
 }
 
 header {
@@ -80,6 +81,8 @@ footer .fab:hover {
     position: relative;
     padding-top: 0;
     padding-bottom: 0;
+    background: var(--main-black);
+    color: var(--main-white);
 }
 
 .hero-section .hero-bg {
@@ -97,6 +100,15 @@ footer .fab:hover {
     z-index: 1;
 }
 
+.hero-logo {
+    max-width: 220px;
+    border-radius: 1rem;
+    box-shadow: 0 0 24px #ff6600a0;
+    margin-bottom: 2rem;
+    background: var(--main-white);
+    padding: 1rem;
+}
+
 .hero-text-white h1,
 .hero-text-white p {
     color: #f8f9fa !important;
@@ -107,6 +119,8 @@ footer .fab:hover {
 .contact-rapide-section {
     position: relative;
     overflow: hidden;
+    background: var(--main-black);
+    color: var(--main-white);
 }
 
 .contact-rapide-bg {
