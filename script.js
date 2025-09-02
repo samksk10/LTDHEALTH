@@ -1,17 +1,21 @@
 // Animation du header au scroll
 window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
-    if (window.scrollY > 100) {
-        header.classList.add('header-scrolled');
-    } else {
-        header.classList.remove('header-scrolled');
+    if (header) {
+        if (window.scrollY > 100) {
+            header.classList.add('header-scrolled');
+        } else {
+            header.classList.remove('header-scrolled');
+        }
     }
 });
 
-// Animation du texte hero
+// Animation du texte hero (si présent)
 document.addEventListener('DOMContentLoaded', () => {
-    const heroText = document.querySelector('#hero p');
-    heroText.classList.add('animate-text');
+    const heroText = document.querySelector('.hero-section p');
+    if (heroText) {
+        heroText.classList.add('animate-text');
+    }
 });
 
 // Animation des liens de navigation
@@ -31,7 +35,7 @@ const observerOptions = {
     threshold: 0.2
 };
 
-const observer = new IntersectionObserver((entries) => {
+const sectionObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
@@ -41,22 +45,22 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('section').forEach(section => {
     section.classList.add('fade-in');
-    observer.observe(section);
+    sectionObserver.observe(section);
 });
 
-// Animation fade-in-up au scroll
+// Animation fade-in-up au scroll pour les éléments avec la classe .fade-in-up
 document.addEventListener("DOMContentLoaded", function () {
     const fadeEls = document.querySelectorAll('.fade-in-up');
-    const observer = new IntersectionObserver((entries) => {
+    const fadeObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('animated');
-                observer.unobserve(entry.target);
+                fadeObserver.unobserve(entry.target);
             }
         });
     }, { threshold: 0.2 });
 
     fadeEls.forEach(el => {
-        observer.observe(el);
+        fadeObserver.observe(el);
     });
 });
