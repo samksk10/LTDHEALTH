@@ -98,10 +98,6 @@ body {
     animation-delay: 0.5s;
 }
 
-.valeur-anim:nth-child(4) {
-    animation-delay: 0.7s;
-}
-
 @keyframes fadeInUp {
     to {
         opacity: 1;
@@ -109,10 +105,29 @@ body {
     }
 }
 
-/* Animation au survol */
-.valeur-card:hover {
+/* Animation sur l’image */
+.valeur-img-anim {
+    opacity: 0;
+    transform: scale(0.95);
+    animation: fadeInImg 1s forwards 0.5s;
+}
+
+@keyframes fadeInImg {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Effet au survol sur l’encadré objectif */
+.border-orange {
+    border-color: #ff6600 !important;
+}
+
+.bg-white:hover,
+.valeur-img-anim:hover {
     box-shadow: 0 8px 32px #ff660080;
-    transform: translateY(-8px) scale(1.03);
+    transform: scale(1.03);
     transition: all 0.3s;
 }
 
