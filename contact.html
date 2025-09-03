@@ -8,17 +8,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-
 </head>
 
-<body class="d-flex flex-column min-vh-100 bg-light">
+<body class="d-flex flex-column min-vh-100">
 
     <!-- HEADER -->
     <header class="shadow-sm">
-        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0D6EFD;">
+        <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <a class="navbar-brand d-flex align-items-center" href="index.html">
-                    <img src="images/logo.jpg" alt="Logo" class="logo me-2" style="height:40px;">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="images/logo.jpg" alt="Logo" class="logo me-2" style="max-height:40px;">
                     <span class="fw-bold">LTD HEALTH CLUB</span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
@@ -28,8 +27,16 @@
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a href="index.html" class="nav-link"><i
                                     class="fas fa-home fa-sm me-1"></i><span class="fw-bold">Accueil</span></a></li>
-                        <li class="nav-item"><a href="services.html" class="nav-link"><i
+                        <li class="nav-item dropdown"><a href="services.html" class="nav-link dropdown-toggle"
+                                id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i
                                     class="fas fa-hands-helping me-1"></i><span class="fw-bold">Nos Services</span></a>
+                            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                                <li><a class="dropdown-item" href="hospitalisation.html">Hospitalisation</a></li>
+                                <li><a class="dropdown-item" href="soinsCourant.html">Soins courants</a></li>
+                                <li><a class="dropdown-item" href="dentaireOptique.html">Dentaire & Optique</a></li>
+                                <li><a class="dropdown-item" href="pediatrie.html">Pédiatrie</a></li>
+                                <li><a class="dropdown-item" href="plansPersonnalise.html">Plans personnalisés</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a href="about.html" class="nav-link dropdown-toggle" id="aboutDropdown" role="button"
@@ -39,13 +46,13 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
                                 <li><a class="dropdown-item" href="mission.html">Notre Mission</a></li>
+                                <li><a class="dropdown-item" href="valeurs.html">Nos Valeurs</a></li>
                                 <li><a class="dropdown-item" href="team.html">Notre Équipe</a></li>
-                                <li><a class="dropdown-item" href="values.html">Nos Valeurs</a></li>
-                                <li><a class="dropdown-item" href="history.html">Notre Histoire</a></li>
-                                <li><a class="dropdown-item" href="partners.html">Nos Partenaires</a></li>
+                                <li><a class="dropdown-item" href="engagement.html">Nos engagements</a></li>
+                                <li><a class="dropdown-item" href="partenaire.html">Nos Partenaires</a></li>
+
                             </ul>
                         </li>
-
                         <li class="nav-item"><a href="contact.html" class="nav-link"><i
                                     class="fas fa-envelope me-1"></i><span class="fw-bold">Contactez-nous</span></a>
                         </li>
@@ -56,12 +63,15 @@
     </header>
 
     <!-- HERO CONTACT -->
-    <section class="contact-hero-bg mb-5">
-        <div class="container text-center">
-            <h1 class="display-5 fw-bold contact-hero-title mb-2">Contactez-nous</h1>
-            <p class="lead text-white mb-0">Une question ? Un besoin ? Notre équipe vous répond rapidement.</p>
+    <section class="hero-section text-center">
+        <div class="container">
+            <img src="images/logo.jpg" alt="logo LTD health Club" class="hero-logo">
+            <h1 class="display-4 fw-bold mb-3">Contactez-nous</h1>
+            <p class="lead text-white mb-0">Une question ? Un besoin ? Notre équipe vous répond rapidement.</p>
         </div>
     </section>
+
+
 
     <!-- CONTENU PRINCIPAL -->
     <main class="flex-grow-1">
@@ -71,7 +81,8 @@
                 <div class="col-lg-6">
                     <div class="card shadow-sm border-0 h-100">
                         <div class="card-body">
-                            <h2 class="h4 mb-3 text-primary"><i class="fas fa-envelope me-2"></i>Formulaire rapide</h2>
+                            <h2 class="h4 mb-3 text-primary"><i class="fas fa-envelope me-2"
+                                    style="color:#ff6600;"></i>Formulaire rapide</h2>
                             <form action="https://formspree.io/f/meozqgpl" method="POST" class="needs-validation"
                                 novalidate id="contactForm">
                                 <div class="mb-3">
@@ -90,10 +101,11 @@
                                         required></textarea>
                                     <div class="invalid-feedback">Veuillez saisir votre message</div>
                                 </div>
-                                <button type="submit" class="btn btn-primary w-100 py-2">
-                                    <i class="fas fa-paper-plane me-2"></i>Envoyer
+                                <button type="submit" class="btn btn-primary w-100 py-2" style="color:#ff6600;">
+                                    <i class="fas fa-paper-plane me-2" style="color:#ff6600;"></i>Envoyer
                                 </button>
-                                <div class="alert alert-success mt-3 form-success" id="formSuccess">
+                                <div class="alert alert-success mt-3 form-success" id="formSuccess"
+                                    style="display:none;">
                                     <i class="fas fa-check-circle me-2"></i>Votre message a bien été envoyé. Merci !
                                 </div>
                             </form>
@@ -181,6 +193,23 @@
                 success.style.display = "none";
                 event.target.submit(); // maintenant on envoie le formulaire
             }, 3000);
+        });
+
+        // Animation fade-in sur les sections
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll('.card, .hero-section').forEach(function (el) {
+                el.classList.add('fade-in');
+            });
+        });
+
+        // Animation bouton au survol
+        document.querySelectorAll('.btn-primary').forEach(function (btn) {
+            btn.addEventListener('mouseenter', function () {
+                btn.classList.add('btn-animate');
+            });
+            btn.addEventListener('mouseleave', function () {
+                btn.classList.remove('btn-animate');
+            });
         });
     </script>
 
